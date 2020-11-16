@@ -8,11 +8,9 @@ const CardList = ({ robots }) => (
         {
             robots.map((robot, index) => (
                 <Card 
-                    key={`robot-${index}`}
-                    name={robot.name} 
-                    id={robot.id} 
                     imgUrl={`https://robohash.org/${robot.id}?200x200`}
-                    email={robot.email}
+                    key={`robot-${index}`}
+                    {...robot}
                 />
             ))
         }

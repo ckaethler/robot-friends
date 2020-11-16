@@ -33,11 +33,15 @@ export const CardBodyComponent = styled.main`
     }
 `;
 
+export const CardBodyListComponent = styled.ul``;
+
+export const ListItem = styled.li``;
+
 // CARD FOOTER
 export const CardFooterComponent = styled.footer``;
 
 // ROBOT NAME
-export const NameComponent = styled.h2`
+export const CardTitle = styled.h2`
     font-family: ${props => props.theme.fonts.name};
 `;
 
