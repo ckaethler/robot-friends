@@ -8,6 +8,7 @@ const CardList = ({ robots }) => (
         {
             robots.map((robot, index) => (
                 <Card 
+                    // external API for profile images
                     imgUrl={`https://robohash.org/${robot.id}?200x200`}
                     key={`robot-${index}`}
                     {...robot}

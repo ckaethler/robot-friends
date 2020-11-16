@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import CardList from '../../Components/CardList/CardList.Component';
 import SearchBox from '../../Components/SearchBox/SearchBox.Component';
+import Scroll from '../../Components/Scroll/Scroll.Component';
 
 import { AppComponent, AppTitleComponent, NavigationComponent } 
     from './App.Styles';
@@ -42,7 +43,10 @@ class App extends Component {
                         <AppTitleComponent>Robot Friends</AppTitleComponent>
                         <SearchBox searchChange={this.onSearchChange} />
                     </NavigationComponent>
-                    <CardList robots={filteredRobots} />
+
+                    <Scroll>
+                        <CardList robots={filteredRobots} />
+                    </Scroll>
                 </AppComponent>
             </Theme>
         )

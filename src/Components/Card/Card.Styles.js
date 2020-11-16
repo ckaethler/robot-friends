@@ -33,10 +33,6 @@ export const CardBodyComponent = styled.main`
     }
 `;
 
-export const CardBodyListComponent = styled.ul``;
-
-export const ListItem = styled.li``;
-
 // CARD FOOTER
 export const CardFooterComponent = styled.footer``;
 
