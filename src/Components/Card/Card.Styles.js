@@ -1,28 +1,53 @@
 import styled from 'styled-components';
 
+// ENTIRE CARD
 export const CardComponent = styled.div`
-    background-color: green;
+    background-color: ${props => props.theme.colors.primary.medium};
     display: inline-block;
-    border-radius: 3px;
-    padding: 3rem;
-    margin: 2rem;
+    border-radius: 1rem;
+    padding: ${props => props.theme.margins.large};
+    margin: ${props => props.theme.margins.large};
     text-align: center;
     transition: all .5s;
-    border: 1px solid black;
-    box-shadow: 1rem 1rem 2rem 0 rgba(0, 0, 0, .2);
+    box-shadow: 2rem 2rem 3rem 0 rgba(0, 0, 0, .3);
 
     &:hover {
         transform: scale(1.1);
-        box-shadow: 1rem 1rem 3rem 0 rgba(0, 0, 0, .2);
+        background-color: ${props => props.theme.colors.primary.light};
+        box-shadow: 3rem 3rem 3rem 0 rgba(0, 0, 0, .2);
     }
 `;
 
-export const CardBodyComponent = styled.div`
-    h2 {
-        font-size: 30px;
+// CARD HEADER
+export const CardHeaderComponent = styled.header`
+    background-color: white;
+`;
+
+// CARD BODY
+export const CardBodyComponent = styled.main`
+
+    img {
+        background-color: ${props => props.theme.colors.opacity.light};
+        border-radius: 50%;
+        margin: ${props => props.theme.margins.large} 0;
     }
 `;
 
-export const NameComponent = styled.h2``;
+// CARD FOOTER
+export const CardFooterComponent = styled.footer``;
 
-export const EmailComponent = styled.p``;
+// ROBOT NAME
+export const NameComponent = styled.h2`
+    font-family: ${props => props.theme.fonts.name};
+`;
+
+// ROBOT EMAIL
+export const EmailComponent = styled.div`
+    font-family: ${props => props.theme.fonts.email};
+
+    h3 {
+        text-decoration: underline;
+        display: inline-block;
+        font-size: 1.6rem;
+    }
+`;

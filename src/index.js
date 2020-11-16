@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+
 import App from './Pages/App/App.Pages';
+import Theme from './Theme.Styles';
 import reportWebVitals from './reportWebVitals';
+
+import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Theme>
+      <App />
+    </Theme>
   </React.StrictMode>,
   document.getElementById('root')
 );

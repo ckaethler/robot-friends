@@ -10,6 +10,39 @@ html {
     font-size: 62.5%;
 }
 
+@font-face {
+    font-family: 'Digitalis';
+    src: url('./Assets/Fonts/Digitalis_Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SavedByZero';
+    src: url('./Assets/Fonts/SavedByZero.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('./Assets/Fonts/Pacifico-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "XhanMono";
+    src: url('./Assets/Fonts/XanhMono-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     box-sizing: border-box;
+    background: rgb(14,78,79);
+    background: 
+        linear-gradient(90deg, rgba(14,78,79,1) 0%, 
+        rgba(115,78,14,1) 100%)
+        fixed;
 }

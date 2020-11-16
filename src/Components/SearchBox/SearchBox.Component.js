@@ -2,12 +2,14 @@ import React from 'react';
 
 import { SearchBoxComponent, SearchBoxContainerComponent } from './SearchBox.Styles';
 
-const SearchBox = () => {
+const SearchBox = ({ searchChange }) => {
     return (
         <SearchBoxContainerComponent>
             <SearchBoxComponent 
-                type="searc" 
-                placeholder="search robots" 
+                type="text"
+                name="search"
+                placeholder="Search Robots..."
+                onChange={searchChange}
             />
         </SearchBoxContainerComponent>
     );

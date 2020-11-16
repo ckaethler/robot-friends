@@ -1,3 +1,5 @@
 import styled from 'styled-components';
 
-export const CardListComponent = styled.div``;
+export const CardListComponent = styled.div`
+    
+`;

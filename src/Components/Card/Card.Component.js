@@ -1,15 +1,26 @@
 import React from 'react';
 
-import { CardComponent, CardBodyComponent, NameComponent, EmailComponent } 
-    from './Card.Styles';
+import { CardComponent, CardBodyComponent, NameComponent, EmailComponent,
+    CardHeaderComponent, CardFooterComponent} from './Card.Styles';
 
 const Card = ({ id, name, email, imgUrl }) => (
     <CardComponent>
-        <img src={imgUrl} alt="Robot Profile" />
-        <CardBodyComponent>
+        {/* Card Header */}
+        <CardHeaderComponent>
             <NameComponent>{name}</NameComponent>
-            <EmailComponent>{email}</EmailComponent>
+        </CardHeaderComponent>
+        
+        {/* Card Body */}
+        <CardBodyComponent>
+            <img src={imgUrl} alt="Robot Profile" />
         </CardBodyComponent>
+
+        {/* Card Footer */}
+        <CardFooterComponent>
+            <EmailComponent>
+                <h3>Email:</h3> {email}
+            </EmailComponent>
+        </CardFooterComponent>
     </CardComponent>
 );
 
