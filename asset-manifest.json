@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/robot-friends/static/css/main.ba468e52.chunk.css",
+    "main.js": "/robot-friends/static/js/main.62aefee0.chunk.js",
+    "main.js.map": "/robot-friends/static/js/main.62aefee0.chunk.js.map",
+    "runtime-main.js": "/robot-friends/static/js/runtime-main.73e81e4f.js",
+    "runtime-main.js.map": "/robot-friends/static/js/runtime-main.73e81e4f.js.map",
+    "static/js/2.ac0a346b.chunk.js": "/robot-friends/static/js/2.ac0a346b.chunk.js",
+    "static/js/2.ac0a346b.chunk.js.map": "/robot-friends/static/js/2.ac0a346b.chunk.js.map",
+    "static/js/3.86b5ad13.chunk.js": "/robot-friends/static/js/3.86b5ad13.chunk.js",
+    "static/js/3.86b5ad13.chunk.js.map": "/robot-friends/static/js/3.86b5ad13.chunk.js.map",
+    "index.html": "/robot-friends/index.html",
+    "static/css/main.ba468e52.chunk.css.map": "/robot-friends/static/css/main.ba468e52.chunk.css.map",
+    "static/js/2.ac0a346b.chunk.js.LICENSE.txt": "/robot-friends/static/js/2.ac0a346b.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/robot-friends/static/media/XanhMono-Regular.0105f68e.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.73e81e4f.js",
+    "static/js/2.ac0a346b.chunk.js",
+    "static/css/main.ba468e52.chunk.css",
+    "static/js/main.62aefee0.chunk.js"
+  ]
+}
