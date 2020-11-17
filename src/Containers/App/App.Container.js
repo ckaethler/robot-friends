@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import CardList from '../../Components/CardList/CardList.Component';
 import SearchBox from '../../Components/SearchBox/SearchBox.Component';
 import Scroll from '../../Components/Scroll/Scroll.Component';
+import ErrorBoundary from 
+    '../../Components/ErrorBoundary/ErrorBoundary.Component';
 
 import { AppComponent, AppTitleComponent, NavigationComponent } 
     from './App.Styles';
@@ -45,7 +47,9 @@ class App extends Component {
                     </NavigationComponent>
 
                     <Scroll>
-                        <CardList robots={filteredRobots} />
+                        <ErrorBoundary>
+                            <CardList robots={filteredRobots} />
+                        </ErrorBoundary>
                     </Scroll>
                 </AppComponent>
             </Theme>
