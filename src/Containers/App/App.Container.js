@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import CardList from '../../Components/CardList/CardList.Component';
 import SearchBox from '../../Components/SearchBox/SearchBox.Component';
@@ -10,51 +10,43 @@ import { AppComponent, AppTitleComponent, NavigationComponent }
     from './App.Styles';
 import Theme from '../../Theme.Styles';
 
-class App extends Component {
-    constructor() {
-        super();
+const App = () => {
+    const [robots, setRobots] = useState([]);
+    const [searchfield, setSearchField] = useState('');
 
-        this.state = {
-            searchfield: '',
-            robots: [],
-        }
-    }
-
-    componentDidMount() {
+    // Calls Robots API
+    useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
-            .then(users => this.setState({ robots: users }));
+            .then(users => setRobots(users));
+    }, []) 
+
+    const onSearchChange = event => {
+        setSearchField(event.target.value);
     }
 
-    onSearchChange = event => {
-        this.setState({ searchfield: event.target.value }) ;
-    }
+    const filteredRobots = robots.filter(robot => (
+        robot.name.toLowerCase().includes(searchfield.toLowerCase())
+    ));
 
-    render() {
-        const { robots, searchfield } = this.state;
-        const filteredRobots = robots.filter(robot => (
-            robot.name.toLowerCase().includes(searchfield.toLowerCase())
-        ));
+    if (robots.length === 0) return <h1>Loading...</h1>
 
-        if (robots.length === 0) return <h1>Loading...</h1>
+    return (
+        <Theme>
+            <AppComponent>
+                <NavigationComponent>
+                    <AppTitleComponent>Robot Friends</AppTitleComponent>
+                    <SearchBox searchChange={onSearchChange} />
+                </NavigationComponent>
 
-        return (
-            <Theme>
-                <AppComponent>
-                    <NavigationComponent>
-                        <AppTitleComponent>Robot Friends</AppTitleComponent>
-                        <SearchBox searchChange={this.onSearchChange} />
-                    </NavigationComponent>
-
-                    <Scroll>
-                        <ErrorBoundary>
-                            <CardList robots={filteredRobots} />
-                        </ErrorBoundary>
-                    </Scroll>
-                </AppComponent>
-            </Theme>
-        )
-    }
+                <Scroll>
+                    <ErrorBoundary>
+                        <CardList robots={filteredRobots} />
+                    </ErrorBoundary>
+                </Scroll>
+            </AppComponent>
+        </Theme>
+    )
 }
 
 export default App;

@@ -1,15 +1,5 @@
 import React from 'react';
-import { ThemeProvider, keyframes } from 'styled-components';
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(180deg);
-  }
-`;
+import { ThemeProvider } from 'styled-components';
 
 const themeSettings = {
     colors: {
